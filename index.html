@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./src/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="main">
@@ -13,17 +14,22 @@
             <!-- ?Navegación -->
             <nav class="container__navbar">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Acerca de mi</a></li>
-                    <li><a href="#">Mis habilidades</a></li>
-                    <li><a href="#">Experiencia</a></li>
-                    <li><a href="#">Mi portafolio</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">Acerca de mi</a></li>
+                    <li><a href="#skills">Mis habilidades</a></li>
+                    <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#portfolio">Mi portafolio</a></li>
+                    <li><a href="#contact">Contacto</a></li>
                 </ul>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </nav>
 
-            <!-- Header -->
-            <header class="main__header">
+            <!-- !Header -->
+            <header class="main__header" id="header">
                 <div class="header__presentation">
                     <h1>
                         Soy <span>Cristian Muñoz</span>
@@ -47,31 +53,37 @@
                 </div>
 
                 <div class="header__socialIcons">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_55_764)">
-                        <path d="M5.74446 21H1.39071V6.9795H5.74446V21ZM3.56496 5.067C2.17296 5.067 1.04346 3.9135 1.04346 2.5215C1.04346 1.85276 1.30911 1.2114 1.78199 0.73853C2.25486 0.265657 2.89621 0 3.56496 0C4.2337 0 4.87505 0.265657 5.34793 0.73853C5.8208 1.2114 6.08646 1.85276 6.08646 2.5215C6.08646 3.9135 4.95696 5.067 3.56496 5.067ZM22.039 21H17.695V14.175C17.695 12.5482 17.662 10.4625 15.4315 10.4625C13.168 10.4625 12.8207 12.2295 12.8207 14.058V21H8.47146V6.9795H12.6467V8.892H12.7075C13.2887 7.79025 14.7085 6.62775 16.8265 6.62775C21.2327 6.62775 22.0427 9.5295 22.0427 13.2983V21H22.039Z" fill="#197F5B"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_55_764">
-                        <rect width="24" height="24" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
+                    <a href="#linkedin">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_55_764)">
+                            <path d="M5.74446 21H1.39071V6.9795H5.74446V21ZM3.56496 5.067C2.17296 5.067 1.04346 3.9135 1.04346 2.5215C1.04346 1.85276 1.30911 1.2114 1.78199 0.73853C2.25486 0.265657 2.89621 0 3.56496 0C4.2337 0 4.87505 0.265657 5.34793 0.73853C5.8208 1.2114 6.08646 1.85276 6.08646 2.5215C6.08646 3.9135 4.95696 5.067 3.56496 5.067ZM22.039 21H17.695V14.175C17.695 12.5482 17.662 10.4625 15.4315 10.4625C13.168 10.4625 12.8207 12.2295 12.8207 14.058V21H8.47146V6.9795H12.6467V8.892H12.7075C13.2887 7.79025 14.7085 6.62775 16.8265 6.62775C21.2327 6.62775 22.0427 9.5295 22.0427 13.2983V21H22.039Z" fill="#197F5B"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_55_764">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    
+                    <a href="#insta">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.0001 8.87579C10.2798 8.87579 8.8759 10.2797 8.8759 12C8.8759 13.7203 10.2798 15.1242 12.0001 15.1242C13.7204 15.1242 15.1243 13.7203 15.1243 12C15.1243 10.2797 13.7204 8.87579 12.0001 8.87579ZM21.3704 12C21.3704 10.7063 21.3822 9.42423 21.3095 8.13282C21.2368 6.63282 20.8947 5.30157 19.7978 4.2047C18.6986 3.10548 17.3697 2.76564 15.8697 2.69298C14.5759 2.62033 13.2939 2.63204 12.0025 2.63204C10.7087 2.63204 9.42668 2.62033 8.13527 2.69298C6.63527 2.76564 5.30402 3.10783 4.20714 4.2047C3.10792 5.30392 2.76808 6.63282 2.69542 8.13282C2.62277 9.42657 2.63449 10.7086 2.63449 12C2.63449 13.2914 2.62277 14.5758 2.69542 15.8672C2.76808 17.3672 3.11027 18.6984 4.20714 19.7953C5.30636 20.8945 6.63527 21.2344 8.13527 21.307C9.42902 21.3797 10.7111 21.368 12.0025 21.368C13.2962 21.368 14.5782 21.3797 15.8697 21.307C17.3697 21.2344 18.7009 20.8922 19.7978 19.7953C20.897 18.6961 21.2368 17.3672 21.3095 15.8672C21.3845 14.5758 21.3704 13.2938 21.3704 12V12ZM12.0001 16.807C9.33996 16.807 7.19308 14.6602 7.19308 12C7.19308 9.33985 9.33996 7.19298 12.0001 7.19298C14.6603 7.19298 16.8072 9.33985 16.8072 12C16.8072 14.6602 14.6603 16.807 12.0001 16.807ZM17.004 8.11876C16.3829 8.11876 15.8814 7.6172 15.8814 6.99611C15.8814 6.37501 16.3829 5.87345 17.004 5.87345C17.6251 5.87345 18.1267 6.37501 18.1267 6.99611C18.1269 7.14359 18.098 7.28966 18.0416 7.42595C17.9853 7.56224 17.9026 7.68607 17.7983 7.79036C17.694 7.89464 17.5702 7.97733 17.4339 8.03368C17.2976 8.09003 17.1515 8.11895 17.004 8.11876V8.11876Z" fill="#197F5B"/>
+                        </svg>
+                    </a>
 
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.0001 8.87579C10.2798 8.87579 8.8759 10.2797 8.8759 12C8.8759 13.7203 10.2798 15.1242 12.0001 15.1242C13.7204 15.1242 15.1243 13.7203 15.1243 12C15.1243 10.2797 13.7204 8.87579 12.0001 8.87579ZM21.3704 12C21.3704 10.7063 21.3822 9.42423 21.3095 8.13282C21.2368 6.63282 20.8947 5.30157 19.7978 4.2047C18.6986 3.10548 17.3697 2.76564 15.8697 2.69298C14.5759 2.62033 13.2939 2.63204 12.0025 2.63204C10.7087 2.63204 9.42668 2.62033 8.13527 2.69298C6.63527 2.76564 5.30402 3.10783 4.20714 4.2047C3.10792 5.30392 2.76808 6.63282 2.69542 8.13282C2.62277 9.42657 2.63449 10.7086 2.63449 12C2.63449 13.2914 2.62277 14.5758 2.69542 15.8672C2.76808 17.3672 3.11027 18.6984 4.20714 19.7953C5.30636 20.8945 6.63527 21.2344 8.13527 21.307C9.42902 21.3797 10.7111 21.368 12.0025 21.368C13.2962 21.368 14.5782 21.3797 15.8697 21.307C17.3697 21.2344 18.7009 20.8922 19.7978 19.7953C20.897 18.6961 21.2368 17.3672 21.3095 15.8672C21.3845 14.5758 21.3704 13.2938 21.3704 12V12ZM12.0001 16.807C9.33996 16.807 7.19308 14.6602 7.19308 12C7.19308 9.33985 9.33996 7.19298 12.0001 7.19298C14.6603 7.19298 16.8072 9.33985 16.8072 12C16.8072 14.6602 14.6603 16.807 12.0001 16.807ZM17.004 8.11876C16.3829 8.11876 15.8814 7.6172 15.8814 6.99611C15.8814 6.37501 16.3829 5.87345 17.004 5.87345C17.6251 5.87345 18.1267 6.37501 18.1267 6.99611C18.1269 7.14359 18.098 7.28966 18.0416 7.42595C17.9853 7.56224 17.9026 7.68607 17.7983 7.79036C17.694 7.89464 17.5702 7.97733 17.4339 8.03368C17.2976 8.09003 17.1515 8.11895 17.004 8.11876V8.11876Z" fill="#197F5B"/>
-                    </svg>
-
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.7499 5.96017C21.0327 6.26954 20.2522 6.4922 19.4483 6.57892C20.283 6.08306 20.908 5.2997 21.2061 4.37579C20.4229 4.8417 19.5649 5.16841 18.6702 5.34142C18.2962 4.94163 17.844 4.62315 17.3415 4.40581C16.8391 4.18847 16.2973 4.07693 15.7499 4.07813C13.535 4.07813 11.7538 5.87345 11.7538 8.07658C11.7538 8.38595 11.7913 8.69533 11.8522 8.99298C8.53584 8.81954 5.57802 7.23517 3.61162 4.80939C3.25332 5.42137 3.06556 6.1182 3.06787 6.82736C3.06787 8.21486 3.77334 9.43829 4.84912 10.1578C4.21515 10.1329 3.59602 9.9586 3.04209 9.64923V9.69845C3.04209 11.6414 4.41553 13.2516 6.24599 13.6219C5.9023 13.7112 5.54874 13.7568 5.19365 13.7578C4.93349 13.7578 4.6874 13.732 4.43896 13.6969C4.94521 15.2813 6.41943 16.4321 8.1749 16.4696C6.80146 17.5453 5.08115 18.1781 3.21318 18.1781C2.87803 18.1781 2.56865 18.1664 2.24756 18.1289C4.01943 19.2656 6.12177 19.9219 8.38583 19.9219C15.7358 19.9219 19.7577 13.8328 19.7577 8.54767C19.7577 8.37423 19.7577 8.20079 19.746 8.02736C20.5241 7.45782 21.2061 6.75236 21.7499 5.96017Z" fill="#197F5B"/>
-                    </svg>
+                    <a href="#tw">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.7499 5.96017C21.0327 6.26954 20.2522 6.4922 19.4483 6.57892C20.283 6.08306 20.908 5.2997 21.2061 4.37579C20.4229 4.8417 19.5649 5.16841 18.6702 5.34142C18.2962 4.94163 17.844 4.62315 17.3415 4.40581C16.8391 4.18847 16.2973 4.07693 15.7499 4.07813C13.535 4.07813 11.7538 5.87345 11.7538 8.07658C11.7538 8.38595 11.7913 8.69533 11.8522 8.99298C8.53584 8.81954 5.57802 7.23517 3.61162 4.80939C3.25332 5.42137 3.06556 6.1182 3.06787 6.82736C3.06787 8.21486 3.77334 9.43829 4.84912 10.1578C4.21515 10.1329 3.59602 9.9586 3.04209 9.64923V9.69845C3.04209 11.6414 4.41553 13.2516 6.24599 13.6219C5.9023 13.7112 5.54874 13.7568 5.19365 13.7578C4.93349 13.7578 4.6874 13.732 4.43896 13.6969C4.94521 15.2813 6.41943 16.4321 8.1749 16.4696C6.80146 17.5453 5.08115 18.1781 3.21318 18.1781C2.87803 18.1781 2.56865 18.1664 2.24756 18.1289C4.01943 19.2656 6.12177 19.9219 8.38583 19.9219C15.7358 19.9219 19.7577 13.8328 19.7577 8.54767C19.7577 8.37423 19.7577 8.20079 19.746 8.02736C20.5241 7.45782 21.2061 6.75236 21.7499 5.96017Z" fill="#197F5B"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="header__email">
-                    <p>
+                    <h3>
                         ¿Te gustaría colaborar juntos
                         creando productos increíbles?
-                    </p>
+                    </h3>
                     <form>
                         <input type="email" placeholder="Deja tu correo aquí..." name="emailUser">
                         <button type="submit">¡Listo!</button>
@@ -79,26 +91,145 @@
                 </div>
             </header>
 
-            <!-- Acerca de -->
-            <section></section> 
+            <!-- !Acerca de -->
+            <section class="main__about" id="about">
+                <h2>Acerca de mí</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Non distinctio temporibus, 
+                    laudantium facilis, voluptatibus vero eveniet 
+                    odio inventore dolore ex recusandae placeat 
+                    illum quae! Blanditiis, consectetur esse 
+                    necessitatibus beatae iste quasi amet. In, 
+                    necessitatibus illo.
+                </p>
+                <a href="#">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4.16666V15.8333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.8332 10L9.99984 15.8333L4.1665 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                    </svg>
+                    Descargar CV
+                </a>
+            </section> 
 
-            <!-- Estudios -->
-            <section></section> 
+            <section class="main__studies">
+                <h2>Estudios</h2>
+                <div class="studies__places">
+                    <div class="places__colleges">
+                        <img src="./src/img/Tec.png" alt="Tec de Monterrey">
+                        <h4>Tec de Monterrey</h4>
+                        <span>2014-2020</span>
+                        <p>Licenciatura en diseño industrial</p>
+                    </div>
+                    <div class="places__colleges">
+                        <img src="./src/img/logo_academlo.png" alt="Tec de Monterrey">
+                        <h4>Academlo</h4>
+                        <span>2020-2021</span>
+                        <p>Programa full stack</p>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Habilidades -->
-            <section></section> 
+            <!-- !Habilidades -->
+            <section class="main__skills" id="skills">
+                <h2>Mis habilidades</h2>
+                <div class="skills__valueInfo">
+                    <h4>Web design</h4>
+                    <span>80%</span>
+                    <div class="valueInfo__bar">
+                        <div class="bar__progress"></div>
+                    </div>
+                </div>
+                <div class="skills__valueInfo">
+                    <h4>Interaction Design</h4>
+                    <span>95%</span>
+                    <div class="valueInfo__bar">
+                        <div class="bar__progress"></div>
+                    </div>
+                </div>
+                <div class="skills__valueInfo">
+                    <h4>UX</h4>
+                    <span>90%</span>
+                    <div class="valueInfo__bar">
+                        <div class="bar__progress"></div>
+                    </div>
+                </div>
+                <div class="skills__valueInfo">
+                    <h4>Frameworks</h4>
+                    <span>75%</span>
+                    <div class="valueInfo__bar">
+                        <div class="bar__progress"></div>
+                    </div>
+                </div>
+            </section> 
 
-            <!-- Experience -->
-            <section></section> 
+            <!-- !Experience -->
+            <section class="main__experience" id="experience">
+                <h2>Experiencia</h2>
+                <div class="experience__pool">
+                    <div class="pool__charge">
+                        <img src="./src/img/Wizeline.png" alt="Wizeline">
+                        <p>Interactive Design</p>
+                        <h4>1 año</h4>
+                    </div>
+                    <div class="pool__charge">
+                        <img src="./src/img/Hootsuite.png" alt="Wizeline">
+                        <p>Product designer</p>
+                        <h4>1 año</h4>
+                    </div>
+                    <div class="pool__charge">
+                        <img src="./src/img/Google.png" alt="Wizeline">
+                        <p>UI Engineer</p>
+                        <h4>6 meses</h4>
+                    </div>
+                    <div class="pool__charge">
+                        <img src="./src/img/Google.png" alt="Wizeline">
+                        <p>Frontend and UI Dev</p>
+                        <h4>6 meses</h4>
+                    </div>
+                </div>
+            </section> 
 
-            <!-- Portfolio -->
-            <section></section> 
+            <!-- !Portfolio -->
+            <section class="main__portfolio" id="portfolio">
+                <h2>Portafolio</h2>
+                <div class="portfolio__pool">
+                    <img src="./src/img/proyect1.png" alt="Portafolio 1">
+                    <img src="./src/img/proyect2.png" alt="Portafolio 2">
+                    <img src="./src/img/proyect3.png" alt="Portafolio 3">
+                    <img src="./src/img/proyect4.png" alt="Portafolio 4">
+                </div>
+            </section> 
 
-            <!-- Contacto -->
-            <section></section> 
+            <!-- !Contacto -->
+            <section class="main__contact" id="contact">
+                <h2>Contacto</h2>
+                <div class="contact__pool">
+                    <div class="pool__way">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M36.6669 28.2V33.2C36.6688 33.6642 36.5737 34.1236 36.3877 34.5489C36.2018 34.9742 35.929 35.356 35.587 35.6698C35.245 35.9836 34.8412 36.2225 34.4015 36.3712C33.9618 36.5199 33.4958 36.5751 33.0335 36.5333C27.9049 35.9761 22.9785 34.2236 18.6502 31.4167C14.6233 28.8578 11.2091 25.4436 8.65021 21.4167C5.83351 17.0687 4.08062 12.1183 3.53355 6.96666C3.4919 6.50577 3.54667 6.04126 3.69438 5.6027C3.84209 5.16414 4.0795 4.76114 4.39149 4.41936C4.70348 4.07758 5.08322 3.8045 5.50653 3.61753C5.92984 3.43055 6.38745 3.33376 6.85021 3.33332H11.8502C12.6591 3.32536 13.4432 3.61179 14.0565 4.13921C14.6698 4.66663 15.0703 5.39907 15.1835 6.19999C15.3946 7.8001 15.786 9.3712 16.3502 10.8833C16.5745 11.4799 16.623 12.1282 16.4901 12.7515C16.3571 13.3747 16.0483 13.9468 15.6002 14.4L13.4835 16.5167C15.8561 20.6892 19.311 24.1441 23.4835 26.5167L25.6002 24.4C26.0534 23.9519 26.6255 23.6431 27.2487 23.5101C27.872 23.3772 28.5203 23.4257 29.1169 23.65C30.629 24.2142 32.2001 24.6056 33.8002 24.8167C34.6098 24.9309 35.3492 25.3387 35.8778 25.9625C36.4063 26.5863 36.6872 27.3826 36.6669 28.2Z" fill="#EF9919"/>
+                        </svg>
+                        <h4>Número celular</h4>
+                        <p>+57 3112499796</p>
+                    </div>
+                    <div class="pool__way">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66683 6.66666H33.3335C35.1668 6.66666 36.6668 8.16666 36.6668 9.99999V30C36.6668 31.8333 35.1668 33.3333 33.3335 33.3333H6.66683C4.8335 33.3333 3.3335 31.8333 3.3335 30V9.99999C3.3335 8.16666 4.8335 6.66666 6.66683 6.66666Z" fill="#EF9919" stroke="#EDE5DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M36.6668 10L20.0002 21.6667L3.3335 10" fill="#EF9919"/>
+                            <path d="M36.6668 10L20.0002 21.6667L3.3335 10" stroke="#EDE5DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h4>Email</h4>
+                        <p>cristiandaniel8080@gmail.com</p>
+                    </div>
+                </div>
+            </section> 
 
-            <!-- Footer -->
-            <footer></footer> 
+            <!-- !Footer -->
+            <footer class="main__footer">
+                <h2><a href="#">Cristian Muñoz</a></h2>
+                <p>Hecho con <i class='bx bxs-heart'></i> en <a href="#academlo">Academlo</a></p>
+            </footer> 
         </main>
     </div>
 </body>
