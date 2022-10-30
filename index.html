@@ -10,48 +10,61 @@
 </head>
 <body>
     <div class="main">
-        <main class="main__container">
-            <!-- ?Navegación -->
-            <nav class="container__navbar">
-                <ul>
+        <!-- ?Navegación -->
+        <nav class="main__navbar">
+            <ul>
+                <a href="#header">
+                    <svg width="360px" heigth="420px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.36 420.48"><defs></defs><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><polyline class="cls-1" points="360.36 210.24 300.24 210.24 300.24 268.2 180.12 348.36 60 268.2 60 152.28 180.12 72.24 300.24 152.28 300.24 198.24 360.36 198.24 360.36 120.12 180.12 0 0 120.12 0 300.36 180.12 420.48 360.36 300.36 360.36 210.24"/><polyline points="144.12 305.4 81 263.4 81 157.08 132.12 123.12 180.12 155.16 228.24 123.12 279.24 157.08 279.24 263.4 216.12 305.4 216.12 229.68 216.12 206.88 180.12 230.88 144.12 206.88 144.12 229.68 144.12 305.4"/></g></g></svg>
+                </a>
+                <div class="navbar__links">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">Acerca de mi</a></li>
                     <li><a href="#skills">Mis habilidades</a></li>
                     <li><a href="#experience">Experiencia</a></li>
                     <li><a href="#portfolio">Mi portafolio</a></li>
                     <li><a href="#contact">Contacto</a></li>
-                </ul>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </nav>
+                </div>
+                
+            </ul>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </nav>
+
+        <main class="main__container">
+            
 
             <!-- !Header -->
-            <header class="main__header" id="header">
+            <header class="container__header" id="header">
+                <div class="header__image">
+                    <div class="image__info">
+                        <p>
+                            UI Designer <br>
+                            <span>4 años</span>
+                        </p> 
+                    </div>
+                    <div class="image__info">
+                        <p>
+                            Frontend Dev <br>
+                            <span>1 año</span>
+                        </p> 
+                    </div>
+
+
+                    <img src="./src/img/mobilePerson.png" alt="mobile">
+                </div>
                 <div class="header__presentation">
-                    <h1>
-                        Soy <span>Cristian Muñoz</span>
+                    <h1 class="f-poppins-subtitle-600">
+                        Soy <strong><span>Cristian Muñoz</span></strong>
                     </h1>
                     <p>
                         Creo, diseño y desarrollo para darle el
                         valor a tu producto.
                     </p>
                 </div>
-                <div class="header__image">
-                    <div class="image__infoUI">
-                        UI Designer<br>
-                        <span>4 años</span>
-                    </div>
-                    <div class="image__infoFrontend">
-                        Frontend Dev<br>
-                        <span>1 año</span>
-                    </div>
-
-                    <img src="./src/img/mobilePerson.png" alt="mobile">
-                </div>
-
+                
                 <div class="header__socialIcons">
                     <a href="#linkedin">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,10 +97,14 @@
                         ¿Te gustaría colaborar juntos
                         creando productos increíbles?
                     </h3>
-                    <form>
-                        <input type="email" placeholder="Deja tu correo aquí..." name="emailUser">
-                        <button type="submit">¡Listo!</button>
-                    </form>
+                    <div class="email__form">
+                        <form>
+                            <input type="email" placeholder="Deja tu correo aquí..." name="emailUser">
+                            <button type="submit">¡Listo!</button>
+                        </form>
+                    </div>
+
+                    
                 </div>
             </header>
 
@@ -111,25 +128,25 @@
                     </svg>
                     Descargar CV
                 </a>
-            </section> 
 
-            <section class="main__studies">
-                <h2>Estudios</h2>
-                <div class="studies__places">
-                    <div class="places__colleges">
-                        <img src="./src/img/Tec.png" alt="Tec de Monterrey">
-                        <h4>Tec de Monterrey</h4>
-                        <span>2014-2020</span>
-                        <p>Licenciatura en diseño industrial</p>
-                    </div>
-                    <div class="places__colleges">
-                        <img src="./src/img/logo_academlo.png" alt="Tec de Monterrey">
-                        <h4>Academlo</h4>
-                        <span>2020-2021</span>
-                        <p>Programa full stack</p>
+                <div class="about__studies">
+                    <h2>Estudios</h2>
+                    <div class="studies__places">
+                        <div class="places__colleges">
+                            <img src="./src/img/Tec.png" alt="Tec de Monterrey">
+                            <h4>Tec de Monterrey</h4>
+                            <span>2014-2020</span>
+                            <p>Licenciatura en diseño industrial</p>
+                        </div>
+                        <div class="places__colleges">
+                            <img src="./src/img/logo_academlo.png" alt="Tec de Monterrey">
+                            <h4>Academlo</h4>
+                            <span>2020-2021</span>
+                            <p>Programa full stack</p>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </section> 
 
             <!-- !Habilidades -->
             <section class="main__skills" id="skills">
