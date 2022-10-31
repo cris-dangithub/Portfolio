@@ -11,6 +11,7 @@
 
     --s-boxForm: rgb(237, 228, 219);
     --s-boxFormBackground: rgb(248, 245, 242);
+    --s-formPlaceHolder: rgba(128, 128, 128, 0.6);
 
     --navbarHeigth: 3.5rem;
 }
@@ -34,6 +35,13 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+h2 {
+    color: var(--n-Black);
+    text-align: center;
+    font-size: 2rem;
+}
+
 /* FUENTES: M: Mobile; D: Desktop */
 .f-poppins-title-600 {
     font-weight: 600;
@@ -49,7 +57,10 @@ a {
     font-weight: 400;
     font-size: 16px;
 }
-
+/* Algunas utilitarias */
+.behind {
+    opacity: 0.2;
+}
 /* ?????????????????????? */
 /* *TEMPORLES* */
 .portfolio__pool img {
@@ -58,6 +69,8 @@ a {
 
 .main .main__container > * {
     padding-top: var(--navbarHeigth);
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 /* ?????????????????????? */
 
@@ -69,6 +82,8 @@ a {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+
+    min-width: 375px;
 }
 
 /* *2. Navbar */
@@ -83,9 +98,10 @@ a {
     right: 0;
     width: 100%;
     height: var(--navbarHeigth);
-    z-index: 2000;
+    z-index: 3000;
 
-    background-color: var(--p-Green); /* ? */
+    /* background-color: var(--p-Green); */ /* ? */
+    background-color: rgba(0, 255, 255, 0.116);
 }
 
 
@@ -137,23 +153,58 @@ a {
 
 /* *3. Contenedor padre*/
 .main .main__container {
-    max-width: 375px;
+    position: relative;
+    top: 0;
+    right: 0;
+    max-width: 630px; /* ?Mediaquery */
     min-width: 375px;
-    padding: 0rem 0.9rem;
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1rem;  
 
     /* background-color: aqua; */ /* ? */
     transition: transform 0.5s;
-
 }
 .main__navbar:hover + .main__container {
     transform: translateX(4rem);
 }
 
-/* *3.1 Header */
+/* *3.1 Figura geométrica del header*/
+.main__container .container__figure {
+    position: absolute;
+    font-size: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container__figure .figure__rectangle {
+    background-color: var(--p-Green);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 26.5rem;
+    z-index: -1000;
+}
+
+.container__figure .figure__trapeze {
+    position: absolute;
+    top: 26.46rem;
+    left: 0;
+
+    width: 100%;
+    height: 0px;
+    z-index: -1000;
+
+    border-right: 8.5rem solid transparent;
+    border-left: 8.5rem solid transparent;
+    border-top: 15rem solid var(--p-Green);
+}
+
+/* *3.2 Header */
 .main__container .container__header {
     position: relative;
     text-align: center;
@@ -162,12 +213,12 @@ a {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    
 }
 
 /* 3.1.1 Imagen */
 .container__header .header__image {
     position: relative;
-    background-color: #000;/* ? */
     font-size: 0;
     display: flex;
     justify-content: center;
@@ -185,16 +236,31 @@ a {
     padding: 0.5rem 0rem;
     border-radius: 2rem;
     line-height: 0.7rem;
+    z-index: 2000;
 }
 
 .image__info:nth-child(1) {
-    top: 0.5rem;
+    top: -1.5rem;
     left: -2.7rem;
 }
 .image__info:nth-child(2) {
-    bottom: 1.8rem;
+    bottom: -0.05rem;
     right: -2.7rem;
 }
+
+.image__info:nth-child(3) {
+    top: -1.2rem;
+    left: -2.7rem;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.image__info:nth-child(4) {
+    bottom: -0.35rem;
+    right: -2.7rem;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
 .image__info span{
     color: var(--p-Orange);
 }
@@ -260,13 +326,18 @@ a {
     outline: none;
     border: 0;
     border-radius: 3rem;
-    padding: 0.6rem;
+    padding: 0.7rem 1.3rem;
     width: 100%;
+    caret-color: grey;
+    color: var(--s-formPlaceHolder);
+    font-size: 0.65rem;
+    
 }
 .email__form form input::placeholder {
     font-size: 0.8rem;
-    padding-left: 0.6rem;
+    color: var(--s-formPlaceHolder);
 }
+
 
 .email__form form button {
     position: absolute;
@@ -282,31 +353,84 @@ a {
     color: var(--s-boxForm);
     font-size: 1rem;
 }
+/* *3.3 Acerca de */
 
-/* *3.2 Figura geométrica del header*/
-.main__figure .figure__rectangle {
+/* mi */
+.main__container .container__about {
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+
+}
+
+.container__about .about__me {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.about__me p {
+    /* background-color: #EF9919; */
+    padding-left: 0.7rem;
+    border-left: var(--p-Green) solid 0.35rem;
+}
+.about__me a {
     background-color: var(--p-Green);
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 26.5rem;
-    z-index: -1000;
+    color: var(--n-WhiteFull);
+    align-self: center;
+    width: 11rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
 }
-
-.main__figure .figure__trapeze {
-    position: absolute;
-    top: 26.5rem;
-    left: 0;
-
-    width: 100%;
-    height: 0px;
-    z-index: -1000;
-
-    border-right: 8.5rem solid transparent;
-    border-left: 8.5rem solid transparent;
-    border-top: 15rem solid var(--p-Green);
+.about__me a svg path{
+    height: 1;
+    stroke: var(--n-WhiteFull);
 }
 
 
+/* estudios */
+.container__about .about__studies {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about__studies .studies__places{ 
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+.studies__places .places__colleges{
+    background-color: var(--s-boxFormBackground); /* ? */
+    width: 45%;
+    justify-self: center;
+    height: 12rem;
+    border-radius: 0.8rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--n-Black);
+}
+
+.places__colleges h4{
+    line-height: 1.1rem;
+}
+
+.places__colleges span{
+    font-size: 0.8rem;
+}
+
+.places__colleges p{
+    line-height: 1rem;
+    font-size: 0.9rem;
+}
