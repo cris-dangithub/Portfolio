@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./src/css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="main">
@@ -26,8 +27,13 @@
                 </div>
                 
             </ul>
+            
+            <a href="#header">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.36 420.48"><defs></defs><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><polyline class="cls-1" points="360.36 210.24 300.24 210.24 300.24 268.2 180.12 348.36 60 268.2 60 152.28 180.12 72.24 300.24 152.28 300.24 198.24 360.36 198.24 360.36 120.12 180.12 0 0 120.12 0 300.36 180.12 420.48 360.36 300.36 360.36 210.24"/><polyline points="144.12 305.4 81 263.4 81 157.08 132.12 123.12 180.12 155.16 228.24 123.12 279.24 157.08 279.24 263.4 216.12 305.4 216.12 229.68 216.12 206.88 180.12 230.88 144.12 206.88 144.12 229.68 144.12 305.4"/></g></g></svg>
+            </a>
 
             <div class="navbar__icon">
+
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,7 +138,7 @@
 
             
             
-            <!-- !Acerca de -->
+            <!-- ?Acerca de -->
             <section class="container__about" id="about">
                 <div class="about__me">
                     <h2>Acerca de mí</h2>
@@ -178,34 +184,37 @@
             <!-- !Habilidades -->
             <section class="container__skills" id="skills">
                 <h2>Mis habilidades</h2>
-                <div class="skills__valueInfo">
-                    <h4>Web design</h4>
-                    <span>80%</span>
-                    <div class="valueInfo__bar">
-                        <div class="bar__progress"></div>
+                <div class="skills__values">
+                    <div class="values__info">
+                        <h4>Web design</h4>
+                        <span>80%</span>
+                        <div class="info__bar">
+                            <div class="bar__progress"></div>
+                        </div>
+                    </div>
+                    <div class="values__info">
+                        <h4>Interaction Design</h4>
+                        <span>95%</span>
+                        <div class="info__bar">
+                            <div class="bar__progress"></div>
+                        </div>
+                    </div>
+                    <div class="values__info">
+                        <h4>UX</h4>
+                        <span>90%</span>
+                        <div class="info__bar">
+                            <div class="bar__progress"></div>
+                        </div>
+                    </div>
+                    <div class="values__info">
+                        <h4>Frameworks</h4>
+                        <span>75%</span>
+                        <div class="info__bar">
+                            <div class="bar__progress"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skills__valueInfo">
-                    <h4>Interaction Design</h4>
-                    <span>95%</span>
-                    <div class="valueInfo__bar">
-                        <div class="bar__progress"></div>
-                    </div>
-                </div>
-                <div class="skills__valueInfo">
-                    <h4>UX</h4>
-                    <span>90%</span>
-                    <div class="valueInfo__bar">
-                        <div class="bar__progress"></div>
-                    </div>
-                </div>
-                <div class="skills__valueInfo">
-                    <h4>Frameworks</h4>
-                    <span>75%</span>
-                    <div class="valueInfo__bar">
-                        <div class="bar__progress"></div>
-                    </div>
-                </div>
+                
             </section> 
 
             <!-- !Experience -->
@@ -276,6 +285,7 @@
             </footer> 
         </main>
     </div>
+
     <script src="src/js/main.js"></script>
 </body>
 </html>
