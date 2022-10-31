@@ -105,6 +105,7 @@ h2 {
 }
 
 
+
 .main__navbar ul {
     background-color: #ef9919; /* ? */
     position: absolute;
@@ -127,7 +128,7 @@ h2 {
     
 }
 /*  */
-.main__navbar:hover ul {
+.main__navbar .navbar__show {
     transform: translateX(0%);
     -webkit-box-shadow: 14px 0px 83px -17px rgba(0,0,0,0.75);
     -moz-box-shadow: 14px 0px 83px -17px rgba(0,0,0,0.75);
@@ -147,7 +148,12 @@ h2 {
     gap: 2rem;
 }
 
-.main__navbar svg {
+.main__navbar .navbar__icon {
+    display: flex;
+    align-items: center;
+}
+
+.main__navbar .navbar__icon svg {
     fill: var(--n-WhiteFull);
 }
 
@@ -166,10 +172,11 @@ h2 {
     /* background-color: aqua; */ /* ? */
     transition: transform 0.5s;
 }
-.main__navbar:hover + .main__container {
+/*  */
+.main .main__containerShowMenu {
     transform: translateX(4rem);
 }
-
+/*  */
 /* *3.1 Figura geométrica del header*/
 .main__container .container__figure {
     position: absolute;
