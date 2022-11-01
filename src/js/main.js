@@ -49,7 +49,7 @@ window.addEventListener('scroll', function()  {
         let elements = document.querySelectorAll('.bar__progress')
         let screenSize = window.innerHeight;
         
-        for (element of elements) {
+        for (let element of elements) {
             condition1 = containerHabilities.getBoundingClientRect().top < screenSize
             condition2 = containerHabilities.getBoundingClientRect().bottom > 0
             if(condition1 && condition2) {
@@ -60,3 +60,32 @@ window.addEventListener('scroll', function()  {
         }
     }
 );
+
+
+/* Experiencia (Swiper) */
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 0,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: false,
+        dynamicBullets: true
+
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    /* scrollbar: {
+        el: '.swiper-scrollbar',
+    }, */
+});

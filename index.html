@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./src/css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
     <div class="main">
@@ -219,29 +219,47 @@
 
             <!-- !Experience -->
             <section class="container__experience" id="experience">
-                <h2>Experiencia</h2>
-                <div class="experience__pool">
-                    <div class="pool__charge">
-                        <img src="./src/img/Wizeline.png" alt="Wizeline">
-                        <p>Interactive Design</p>
-                        <h4>1 año</h4>
-                    </div>
-                    <div class="pool__charge">
-                        <img src="./src/img/Hootsuite.png" alt="Wizeline">
-                        <p>Product designer</p>
-                        <h4>1 año</h4>
-                    </div>
-                    <div class="pool__charge">
-                        <img src="./src/img/Google.png" alt="Wizeline">
-                        <p>UI Engineer</p>
-                        <h4>6 meses</h4>
-                    </div>
-                    <div class="pool__charge">
-                        <img src="./src/img/Google.png" alt="Wizeline">
-                        <p>Frontend and UI Dev</p>
-                        <h4>6 meses</h4>
+                <div class="experience__items">
+                    <h2>Experiencia</h2>
+                    <div class="items__pool swiper">
+                        <div class="swiper-wrapper">
+                            <div class="pool__charge swiper-slide">
+                                <img src="./src/img/Wizeline.png" alt="Wizeline">
+                                <div class="charge__info">
+                                    <p>Interactive Design</p>
+                                    <h4>1 año</h4>
+                                </div>
+                            </div>
+                            <div class="pool__charge swiper-slide">
+                                <img src="./src/img/Hootsuite.png" alt="Wizeline">
+                                <div class="charge__info">
+                                    <p>Product designer</p>
+                                    <h4>1 año</h4>
+                                </div> 
+                            </div>
+                            <div class="pool__charge swiper-slide">
+                                <img src="./src/img/Google.png" alt="Wizeline">
+                                <div class="charge__info">
+                                    <p>UI Engineer</p>
+                                    <h4>6 meses</h4>
+                                </div>
+                            </div>
+                            <div class="pool__charge swiper-slide">
+                                <img src="./src/img/Google.png" alt="Wizeline">
+                                <div class="charge__info">
+                                    <p>Frontend and UI Dev</p>
+                                    <h4>6 meses</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        <!-- <div class="swiper-scrollbar"></div> -->
+
                     </div>
                 </div>
+                
             </section> 
 
             <!-- !Portfolio -->
@@ -286,6 +304,7 @@
         </main>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 </html>
