@@ -108,7 +108,7 @@ h4 {
     z-index: 3000;
 
     /* background-color: var(--p-Green); */ /* ? */
-    background-color: #197f5b;
+    background-color: #197f5b3a;
 }
 
 
@@ -644,3 +644,32 @@ h4 {
     font-weight: bold;
 }
 
+/* *3.6 Portafolio */
+.main__container .container__portfolio {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container__portfolio .portfolio__pool {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.85fr 1fr;
+    gap: 1rem;
+}
+
+.portfolio__pool img {
+    width: 100%;
+}
+
+.portfolio__pool img:nth-child(1) {
+    grid-column: 1 / -1;
+}
+.portfolio__pool img:nth-child(3) {
+    align-self: flex-end;
+}
+.portfolio__pool img:nth-child(4) {
+    grid-column: 1 / -1;
+
+}
