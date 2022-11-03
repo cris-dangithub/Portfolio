@@ -170,13 +170,66 @@ h4 {
 .main__navbar .navbar__icon svg {
     fill: var(--n-WhiteFull);
 }
+@media (min-width: 675px) {
+    .main__navbar ul {
+        background-color: transparent; /* ? */
+        position: static;
+    
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        padding: 0 0rem;
+    
+        transform: translateX(0);
+        transition: none;
+    }
+    
+    .main__navbar ul a{
+        line-height: 0;
+        width: 1.5rem; 
+        align-self: center;
+        color: var(--n-WhiteFull);
+    }
+
+    .main__navbar ul a svg{
+        width: 1.5rem; 
+        fill: var(--n-WhiteFull);
+    }
+    
+    .main__navbar ul .navbar__links{
+        flex-direction: row;
+        font-size: 0.6rem;
+    }
+    
+    .main__navbar > a {
+        display: none;
+    }
+
+    .main__navbar .navbar__icon {
+        display: none;
+    }
+}
+
+@media (min-width: 910px) {
+    .main__navbar ul .navbar__links{
+        font-size: 0.8rem;
+    }
+
+}
+@media (min-width: 1024px) {
+    .main__navbar ul .navbar__links {
+        font-size: 1rem;
+    }
+}
 
 /* *3. Contenedor padre*/
 .main .main__container {
     position: relative;
     top: 0;
     right: 0;
-    max-width: 630px; /* ?Mediaquery */
+    max-width: 674px; /* ?Mediaquery */
     min-width: 375px;
 
     display: flex;
@@ -186,11 +239,11 @@ h4 {
     /* background-color: aqua; */ /* ? */
     transition: transform 0.5s;
 }
-/*  */
+
 .main .main__containerShowMenu {
     transform: translateX(4rem) !important;
 }
-/*  */
+
 /* *3.1 Figura geométrica del header*/
 .main__container .container__figure {
     position: absolute;
@@ -285,6 +338,10 @@ h4 {
 .image__info span{
     color: var(--p-Orange);
 }
+
+.header__image img:nth-child(6){
+    display: none;
+}
 /* 3.1.2 Nombre y lo que hago */
 .container__header .header__presentation {
     display: flex;
@@ -309,7 +366,8 @@ h4 {
     font-size: 0;
     width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3.5rem;
 }
 
 .header__socialIcons a {
@@ -318,6 +376,9 @@ h4 {
     padding: 0.5rem;
 }
 
+.header__socialIcons a svg {
+    width: 1.5rem;
+}
 /* 3.1.4 Dejar el contacto */
 .container__header .header__email {
     background-color: var(--s-boxFormBackground);
@@ -750,4 +811,255 @@ h4 {
 .container__footer p{
     color: var(--n-WhiteFull);
     font-size: 0.8rem;
+    
+}
+
+
+@media (min-width: 675px) {
+
+    .main .main__container {
+        max-width: 1080px;
+    }
+    .main .main__container > *:nth-child(1) ~ * {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .container__figure .figure__rectangle {
+        height: 35rem;
+    }
+
+    .container__figure .figure__trapeze {
+        top: 34.95rem;
+
+        border-top: 18rem solid var(--p-Green);
+        border-right: 10rem solid transparent;
+        border-left: 10rem solid transparent;
+        
+    }
+    
+    
+
+    .container__header .header__image {
+        width: 20rem;
+    }
+
+    .header__image .image__info{
+    
+        font-size: 1rem;
+        width: 50%;
+        padding: 1rem 0rem;
+        border-radius: 2rem;
+        line-height: 1rem;
+    }
+
+    .image__info:nth-child(1) {
+        top: 1.5rem;
+        left: -6rem;
+    }
+    .image__info:nth-child(2) {
+        bottom: 1.6rem;
+        right: -5rem;
+    }
+    
+    .image__info:nth-child(3) {
+        top: 2rem;
+        left: -6rem;
+        z-index: 1000;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    .image__info:nth-child(4) {
+        bottom: 1.1rem;
+        right: -5rem;
+        z-index: 1000;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    .header__image img:nth-child(5) {
+        display: none;
+    }
+
+    .header__image img:nth-child(6) {
+        display: block;
+        width: 100%;
+    }
+
+    .container__header .header__presentation {
+        order: -1;
+        gap: 0.4rem
+    }
+
+    .header__presentation p {
+        font-size: 1.5rem;
+        /* line-height: 2.5rem; */
+    }
+
+    .header__socialIcons a svg {
+        width: 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .about__studies .studies__places{ 
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+    }
+
+    .studies__places .places__colleges{ 
+        max-width: 16rem;
+        height: 15rem;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 1fr 1fr 1fr;
+    }
+
+    .places__colleges img{ 
+        justify-self: center;
+    }
+
+    .container__skills .skills__values{
+        width: calc(16rem * 2 + 1rem);
+        align-self: center;
+    }
+
+    .main .main__container > .container__experience {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+@media (min-width: 910px) {
+    
+    .container__figure .figure__trapeze {
+        border-right: 15rem solid transparent;
+        border-left: 15rem solid transparent;
+    }
+
+    .container__portfolio .portfolio__pool {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+    
+    }
+    .portfolio__pool img:nth-child(1),
+    .portfolio__pool img:nth-child(4) {
+        width: 50%;
+        align-self: flex-start;
+        height: auto;
+    }
+    .portfolio__pool img:nth-child(2),
+    .portfolio__pool img:nth-child(3) {
+        width: 35%;
+        align-self: flex-start;
+        height: auto;
+    }
+    .portfolio__pool img:nth-child(1) {
+        align-self: flex-end;
+    }
+
+
+
+}
+
+
+@media (min-width: 1024px) {
+    .main .main__container {
+        max-width: none;
+    }
+    
+    .container__figure .figure__rectangle {
+        height: 55rem;
+    }
+
+    .container__figure .figure__trapeze {
+        top: 54.95rem;
+
+        border-top: 18rem solid var(--p-Green);
+        border-right: 10rem solid transparent;
+        border-left: 10rem solid transparent;
+    }
+    .container__header .header__image {
+        width: 30rem;
+    }
+
+    .header__presentation h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+    }
+
+    .header__presentation p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .main .main__container > *:nth-child(1) ~ * {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .main .main__container .container__experience {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main .main__container .container__portfolio {
+        padding-left: 0;
+        padding-right: 0;
+        ;
+    }
+    .container__portfolio .portfolio__pool {
+        width: 70%;
+        align-self: center;
+        justify-content: flex-center;
+    }
+
+    .portfolio__pool img:nth-child(1),
+    .portfolio__pool img:nth-child(2),
+    .portfolio__pool img:nth-child(3),
+    .portfolio__pool img:nth-child(4) {
+        width: auto;
+        height: 18rem;
+        align-self: flex-start;
+    }
+
+}
+
+
+@media (min-width: 1120px) {
+    .container__figure .figure__trapeze {
+        border-right: 20rem solid transparent;
+        border-left: 20rem solid transparent;
+    }
+}
+@media (min-width: 1250px) {
+    .container__figure .figure__trapeze {
+        border-right: 25rem solid transparent;
+        border-left: 25rem solid transparent;
+    }
+}
+
+@media (min-width: 1460px) {
+    .container__figure .figure__trapeze {
+        border-right: 30rem solid transparent;
+        border-left: 30rem solid transparent;
+    }
+}
+
+@media (min-width: 1560px) {
+    .container__figure .figure__rectangle {
+        height: 50rem;
+    }
+
+    .container__figure .figure__trapeze {
+        top: 49.95rem;
+        border-right: 30rem solid transparent;
+        border-left: 30rem solid transparent;
+    }
 }

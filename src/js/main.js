@@ -65,10 +65,11 @@ window.addEventListener('scroll', function()  {
 /* Experiencia (Swiper) */
 const swiper = new Swiper('.swiper', {
     // Optional parameters
+    
     loop: true,
     slidesPerView: 2,
     spaceBetween: 0,
-
+    
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
@@ -88,4 +89,42 @@ const swiper = new Swiper('.swiper', {
     /* scrollbar: {
         el: '.swiper-scrollbar',
     }, */
+    breakpoints: {
+        675: {
+            loop: false,
+            slidesPerView: 3,
+            allowTouchMove: true
+
+        },
+        950 :{
+            slidesPerView:4,
+            loop: false
+        }
+    },
 });
+
+let swiperClass = document.querySelector('.swiper')
+
+let swiperActive = ''
+
+if (window.innerHeight >= 950) {
+    swiperActive = false
+    swiper.disable()
+
+} else {
+    swiperActive = true
+}
+
+window.addEventListener('resize', function() {
+    console.log(window.innerWidth)
+    if (window.innerWidth >= 950 && swiperActive === true) {
+        swiper.disable()
+
+
+        swiperActive = false
+    } else if (window.innerWidth < 950 && swiperActive === false){
+        swiperActive = true
+        swiper.enable()
+    }
+
+})
