@@ -983,8 +983,8 @@ h4 {
         top: 54.95rem;
 
         border-top: 18rem solid var(--p-Green);
-        border-right: 10rem solid transparent;
-        border-left: 10rem solid transparent;
+        border-right: 15rem solid transparent;
+        border-left: 15rem solid transparent;
     }
     .container__header .header__image {
         width: 30rem;
