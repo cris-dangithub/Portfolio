@@ -175,6 +175,14 @@ h4 {
     gap: 2rem;
 }
 
+.main__navbar ul .navbar__links li{
+    transition: transform 0.4s;
+}
+
+.main__navbar ul .navbar__links li:hover{
+    transform: scale(1.2);
+}
+
 .main__navbar > a {
     line-height: 0;
     width: 1.5rem; 
@@ -259,6 +267,13 @@ h4 {
     .main__navbar ul .navbar__links{
         flex-direction: row;
         font-size: 0.6rem;
+    }
+
+    .main__navbar ul .navbar__links a{
+        transition: color 0.4s;
+    }
+    .main__navbar ul .navbar__links a:hover{
+        color: var(--p-Orange);
     }
     
     .main__navbar > a {
