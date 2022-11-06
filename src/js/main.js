@@ -41,6 +41,16 @@ function showNumbers (numbers) { //!
     numbersShowed = true
 }
 
+function initialSwiper() {
+    if (window.innerWidth >= 950) {
+        swiperActive = false
+        swiper.disable()
+    
+    } else {
+        swiperActive = true
+    }
+}
+
 function swiperAvailable() {
     if (window.innerWidth >= 950 && swiperActive === true) {
         swiper.disable()
@@ -65,6 +75,8 @@ let activeMenu = false;
 let activeX = false;
 let numbersShowed = false 
 
+let swiperClass = document.querySelector('.swiper')
+let swiperActive = ''
 
 /* console.log(anchorMenu) */
 /* Navbar */
@@ -163,17 +175,7 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-let swiperClass = document.querySelector('.swiper')
-let swiperActive = ''
-
-if (window.innerWidth >= 950) {
-    swiperActive = false
-    swiper.disable()
-
-} else {
-    swiperActive = true
-}
-
+initialSwiper()
 
 window.addEventListener('load', function () {
     swiperAvailable()
