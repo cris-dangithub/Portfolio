@@ -1000,6 +1000,11 @@ h4 {
         font-size: 2rem;
         line-height: 3rem;
     }
+
+    .header__email h3 {
+        font-size: 1.5rem;
+    }
+
     .main .main__container > *:nth-child(1) ~ * {
         padding-left: 20%;
         padding-right: 20%;
