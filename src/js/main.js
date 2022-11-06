@@ -100,7 +100,7 @@ mainContainer.addEventListener('click', function () {
 
 contentAnchorIconMenu.addEventListener('click' , function () {
         activeMenu = quiteMenu(activeMenu)
-        if (navMobile) changeIcon()
+        changeIcon()
     }
 )
 
@@ -181,7 +181,7 @@ initialSwiper()
 
 window.addEventListener('load', function (e) {
     swiperAvailable()
-    if (window.innerWidth < 675) navMobile = true
+    if (window.innerWidth < 675) return navMobile = true
     navMobile = false
 
 })
