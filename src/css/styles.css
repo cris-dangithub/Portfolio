@@ -48,6 +48,8 @@ h2 {
 h4 {
     color: var(--n-Black);
 }
+
+
 /* FUENTES: M: Mobile; D: Desktop */
 .f-poppins-title-600 {
     font-weight: 600;
@@ -298,6 +300,7 @@ h4 {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    width: 13rem;
 }
 
 .header__image .image__info{
@@ -339,8 +342,15 @@ h4 {
     color: var(--p-Orange);
 }
 
+.header__image img:nth-child(5) {
+    width: 100%;
+    border-radius: 3rem;
+
+}
+
 .header__image img:nth-child(6){
     display: none;
+    border-radius: 5rem;
 }
 /* 3.1.2 Nombre y lo que hago */
 .container__header .header__presentation {
@@ -503,7 +513,9 @@ h4 {
     align-items: center;
     color: var(--n-Black);
 }
-
+.places__colleges img {
+    width: 25%;
+}
 .places__colleges h4{
     line-height: 1.1rem;
 }
