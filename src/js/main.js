@@ -6,6 +6,7 @@ const mainContainer = document.querySelector(".main .main__container")
 
 const info__numbers = document.querySelectorAll('.info__number') //!
 const containerHabilities = document.querySelector('.container__skills .skills__values');
+const elements = document.querySelectorAll('.bar__progress')
 
 /* console.log(anchorMenu) */
 /* Navbar */
@@ -62,39 +63,32 @@ function showNumbers (numbers) { //!
         timePerIteration
     )
     
-
     numbersShowed = true
 }
 
 
 /* Habilidades */
-let numbersShowed = false //!
+let numbersShowed = false 
 
 window.addEventListener('scroll', function()  {
-
-        let numbers = [80, 95, 90, 75] //!
-        let elements = document.querySelectorAll('.bar__progress')
-        let screenSize = window.innerHeight;
+    let numbers = [80, 95, 90, 75] 
+    let screenSize = window.innerHeight;
 
 
-        for (let element of elements) {
-            condition1 = containerHabilities.getBoundingClientRect().top < screenSize
-            condition2 = containerHabilities.getBoundingClientRect().bottom > 0
-            if(condition1 && condition2) {
-                element.classList.add('visible');
-                // *! FUNCION PARA INICIAR NUMEROS
-                if (!numbersShowed) showNumbers(numbers)
+    for (let element of elements) {
+        condition1 = containerHabilities.getBoundingClientRect().top < screenSize
+        condition2 = containerHabilities.getBoundingClientRect().bottom > 0
+        if(condition1 && condition2) {
+            element.classList.add('visible');
+            if (!numbersShowed) showNumbers(numbers)
 
-            } else {
-                element.classList.remove('visible');
-                // ! FUNCIÓN PARA VOLVER A CERO LOS NÚMEROS
-            }
+        } else {
+            element.classList.remove('visible');
+            numbersShowed = false
+
         }
-
-        /* Number Effect */
-
     }
-);
+;})
 
 
 /* Experiencia (Swiper) */
