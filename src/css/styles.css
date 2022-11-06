@@ -186,22 +186,6 @@ h4 {
     fill: var(--p-Orange);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main__navbar .navbar__icon {
     display: flex;
     align-items: center;
@@ -210,6 +194,7 @@ h4 {
     height: 2rem;
     line-height: 0;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .main__navbar .navbar__icon svg {
@@ -236,32 +221,6 @@ h4 {
 .navbar__icon i:hover {
     color: var(--p-Orange);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 675px) {
     .main__navbar ul {
