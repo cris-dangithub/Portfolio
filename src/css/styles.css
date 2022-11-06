@@ -186,19 +186,83 @@ h4 {
     fill: var(--p-Orange);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .main__navbar .navbar__icon {
     display: flex;
     align-items: center;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    line-height: 0;
+    cursor: pointer;
 }
 
 .main__navbar .navbar__icon svg {
     stroke: var(--n-WhiteFull);
     transition: stroke 0.4s;
+    position: absolute;
+    right: 0;
+    transition: transform 0.4s, stroke 0.4s;
 }
 .main__navbar .navbar__icon svg:hover {
-    cursor: pointer;
     stroke: var(--p-Orange);
 }
+
+.main__navbar .navbar__icon i {
+    font-size: 2rem;
+    color: var(--n-WhiteFull);
+    position: absolute;
+    right: -0.3rem;
+
+    transform: translateX(400%);
+    transition: transform 0.4s, color 0.4s;
+}
+
+.navbar__icon i:hover {
+    color: var(--p-Orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 675px) {
     .main__navbar ul {
         background-color: transparent; /* ? */

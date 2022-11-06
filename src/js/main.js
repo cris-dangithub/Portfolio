@@ -1,15 +1,3 @@
-const iconMenu = document.querySelector('.main__navbar .navbar__icon')
-const contentMenu = document.querySelector(".main__navbar ul")
-const contentAnchorIconMenu = document.querySelector(".main__navbar ul a svg")
-const anchorMenu = document.querySelectorAll(".navbar__links li a") 
-const mainContainer = document.querySelector(".main .main__container")
-
-const info__numbers = document.querySelectorAll('.info__number') //!
-const containerHabilities = document.querySelector('.container__skills .skills__values');
-const elements = document.querySelectorAll('.bar__progress')
-
-/* console.log(anchorMenu) */
-/* Navbar */
 function quiteMenu(active) {
     if (active) {
         contentMenu.classList.toggle("navbar__show")
@@ -18,30 +6,17 @@ function quiteMenu(active) {
     }
     return active
 }
-
-let activeMenu = false;
-iconMenu.addEventListener('click', function () {
-        contentMenu.classList.toggle("navbar__show")
-        mainContainer.classList.toggle("main__containerShowMenu")
-        activeMenu === false ? activeMenu = true : activeMenu = false
+function changeIcon() {
+    if (activeX === false) {
+        iconMenu.firstElementChild.style.transform = "translateY(-400%)";
+        iconMenu.lastElementChild.style.transform = "translateX(0)"
+        activeX = true
+        
+    } else {
+        iconMenu.firstElementChild.style.transform = "translateY(0%)";
+        iconMenu.lastElementChild.style.transform = "translateX(400%)"
+        activeX = false
     }
-)
-
-mainContainer.addEventListener('click', function () {
-        activeMenu = quiteMenu(activeMenu)
-    }
-)
-
-contentAnchorIconMenu.addEventListener('click' , function () {
-        activeMenu = quiteMenu(activeMenu)
-    }
-)
-
-for (let i = 0; i < anchorMenu.length; i++) {
-        anchorMenu[i].addEventListener('click', function () {
-            activeMenu = quiteMenu(activeMenu)
-        }
-    )
 }
 
 function showNumbers (numbers) { //!
@@ -66,10 +41,65 @@ function showNumbers (numbers) { //!
     numbersShowed = true
 }
 
+function swiperAvailable() {
+    if (window.innerWidth >= 950 && swiperActive === true) {
+        swiper.disable()
+        swiperActive = false
+    } else if (window.innerWidth < 950 && swiperActive === false){
+        swiperActive = true
+        swiper.enable()
+    }
+}
 
-/* Habilidades */
+const iconMenu = document.querySelector('.main__navbar .navbar__icon')
+const contentMenu = document.querySelector(".main__navbar ul")
+const contentAnchorIconMenu = document.querySelector(".main__navbar ul a svg")
+const anchorMenu = document.querySelectorAll(".navbar__links li a") 
+const mainContainer = document.querySelector(".main .main__container")
+
+const info__numbers = document.querySelectorAll('.info__number') //!
+const containerHabilities = document.querySelector('.container__skills .skills__values');
+const elements = document.querySelectorAll('.bar__progress')
+
+let activeMenu = false;
+let activeX = false;
 let numbersShowed = false 
 
+
+/* console.log(anchorMenu) */
+/* Navbar */
+
+iconMenu.addEventListener('click', function (e) {
+        contentMenu.classList.toggle("navbar__show")
+        mainContainer.classList.toggle("main__containerShowMenu")
+        changeIcon()
+        activeMenu === false ? activeMenu = true : activeMenu = false
+    }
+)
+
+mainContainer.addEventListener('click', function () {
+    if (activeMenu) {
+        activeMenu = quiteMenu(activeMenu)
+        changeIcon()
+    }
+    }
+)
+
+contentAnchorIconMenu.addEventListener('click' , function () {
+        activeMenu = quiteMenu(activeMenu)
+        changeIcon()
+    }
+)
+
+for (let i = 0; i < anchorMenu.length; i++) {
+        anchorMenu[i].addEventListener('click', function () {
+            activeMenu = quiteMenu(activeMenu)
+            changeIcon()
+        }
+    )
+}
+
+/* Habilidades */
 window.addEventListener('scroll', function()  {
     let numbers = [80, 95, 90, 75] 
     let screenSize = window.innerHeight;
@@ -92,15 +122,6 @@ window.addEventListener('scroll', function()  {
 
 
 /* Experiencia (Swiper) */
-function swiperAvailable() {
-    if (window.innerWidth >= 950 && swiperActive === true) {
-        swiper.disable()
-        swiperActive = false
-    } else if (window.innerWidth < 950 && swiperActive === false){
-        swiperActive = true
-        swiper.enable()
-    }
-}
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
