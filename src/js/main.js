@@ -61,6 +61,8 @@ function swiperAvailable() {
     }
 }
 
+const button = document.querySelector("button")
+
 const iconMenu = document.querySelector('.main__navbar .navbar__icon')
 const contentMenu = document.querySelector(".main__navbar ul")
 const contentAnchorIconMenu = document.querySelector(".main__navbar ul a svg")
@@ -81,6 +83,11 @@ let swiperActive = ''
 
 /* console.log(anchorMenu) */
 /* Navbar */
+console.log(button)
+button.addEventListener("click", function (e) {
+    e.preventDefault()
+    }
+)
 
 iconMenu.addEventListener('click', function (e) {
         contentMenu.classList.toggle("navbar__show")
