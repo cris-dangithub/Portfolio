@@ -4,8 +4,10 @@ const contentAnchorIconMenu = document.querySelector(".main__navbar ul a svg")
 const anchorMenu = document.querySelectorAll(".navbar__links li a") 
 const mainContainer = document.querySelector(".main .main__container")
 
+const info__numbers = document.querySelectorAll('.info__number') //!
+const containerHabilities = document.querySelector('.container__skills .skills__values');
 
-console.log(anchorMenu)
+/* console.log(anchorMenu) */
 /* Navbar */
 function quiteMenu(active) {
     if (active) {
@@ -41,32 +43,75 @@ for (let i = 0; i < anchorMenu.length; i++) {
     )
 }
 
+function showNumbers (numbers) { //!
+    let a = numbers.map((element) => element = 0 )
+    let cantidadDeNumeros = 100 //Sin incluir el cero, es decir al final serian 6
+    let tTotal = 1000 //en milisegundos
+    let timePerIteration = tTotal/cantidadDeNumeros
+    let count = 0
+
+    const intervalNumbers = setInterval(() => 
+        {
+            for (let i = 0; i < numbers.length; i++) {
+                info__numbers[i].innerHTML = `${Math.round(a[i])}%`
+                a[i] += numbers[i] / cantidadDeNumeros
+            }
+            if (count === cantidadDeNumeros) clearInterval(intervalNumbers)
+            count += 1
+        }, 
+        timePerIteration
+    )
+    
+
+    numbersShowed = true
+}
 
 
 /* Habilidades */
+let numbersShowed = false //!
+
 window.addEventListener('scroll', function()  {
-        const containerHabilities = document.querySelector('.container__skills .skills__values');
+
+        let numbers = [80, 95, 90, 75] //!
         let elements = document.querySelectorAll('.bar__progress')
         let screenSize = window.innerHeight;
-        
+
+
         for (let element of elements) {
             condition1 = containerHabilities.getBoundingClientRect().top < screenSize
             condition2 = containerHabilities.getBoundingClientRect().bottom > 0
             if(condition1 && condition2) {
                 element.classList.add('visible');
+                // *! FUNCION PARA INICIAR NUMEROS
+                if (!numbersShowed) showNumbers(numbers)
+
             } else {
                 element.classList.remove('visible');
+                // ! FUNCIÓN PARA VOLVER A CERO LOS NÚMEROS
             }
         }
+
+        /* Number Effect */
+
     }
 );
 
 
 /* Experiencia (Swiper) */
+function swiperAvailable() {
+    if (window.innerWidth >= 950 && swiperActive === true) {
+        swiper.disable()
+        swiperActive = false
+    } else if (window.innerWidth < 950 && swiperActive === false){
+        swiperActive = true
+        swiper.enable()
+    }
+}
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     
-    loop: true,
+    loop: false,
     slidesPerView: 2,
     spaceBetween: 0,
     
@@ -104,10 +149,9 @@ const swiper = new Swiper('.swiper', {
 });
 
 let swiperClass = document.querySelector('.swiper')
-
 let swiperActive = ''
 
-if (window.innerHeight >= 950) {
+if (window.innerWidth >= 950) {
     swiperActive = false
     swiper.disable()
 
@@ -115,16 +159,11 @@ if (window.innerHeight >= 950) {
     swiperActive = true
 }
 
+
+window.addEventListener('load', function () {
+    swiperAvailable()
+})
+
 window.addEventListener('resize', function() {
-    console.log(window.innerWidth)
-    if (window.innerWidth >= 950 && swiperActive === true) {
-        swiper.disable()
-
-
-        swiperActive = false
-    } else if (window.innerWidth < 950 && swiperActive === false){
-        swiperActive = true
-        swiper.enable()
-    }
-
+    swiperAvailable()
 })
