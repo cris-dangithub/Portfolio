@@ -16,6 +16,7 @@
     --navbarHeigth: 3.5rem;
 
     --swiper-theme-color: #197f5b;
+    --s-navColor: #b98434; 
 }
 
 /* Reseteo del navegador */
@@ -31,6 +32,17 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--s-boxForm);
+}
+body::-webkit-scrollbar-thumb { /* Para estilar el */
+    background-color: #197f5b9c;
+    border-radius: 10px;
+}
 ul {
     list-style: none;
 }
@@ -117,7 +129,7 @@ h4 {
 
 
 .main__navbar ul {
-    background-color: #ef9919; /* ? */
+    background-color: var(--s-navColor); /* ? */
     position: absolute;
     top: 0;
     left: 0;
@@ -300,7 +312,7 @@ h4 {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    width: 13rem;
+    width: 11rem;
 }
 
 .header__image .image__info{
