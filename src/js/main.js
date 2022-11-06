@@ -73,6 +73,7 @@ const elements = document.querySelectorAll('.bar__progress')
 
 let activeMenu = false;
 let activeX = false;
+let navMobile = null;
 let numbersShowed = false 
 
 let swiperClass = document.querySelector('.swiper')
@@ -106,7 +107,8 @@ contentAnchorIconMenu.addEventListener('click' , function () {
 for (let i = 0; i < anchorMenu.length; i++) {
         anchorMenu[i].addEventListener('click', function () {
             activeMenu = quiteMenu(activeMenu)
-            changeIcon()
+            if (navMobile) changeIcon()
+            /* changeIcon() */
         }
     )
 }
@@ -177,10 +179,17 @@ const swiper = new Swiper('.swiper', {
 
 initialSwiper()
 
-window.addEventListener('load', function () {
+window.addEventListener('load', function (e) {
     swiperAvailable()
+    if (window.innerWidth < 675) navMobile = true
+    navMobile = false
+
 })
 
 window.addEventListener('resize', function() {
     swiperAvailable()
+    /* console.log(navMobile) */
+    if (window.innerWidth < 675) return navMobile = true
+    navMobile = false
+    
 })
