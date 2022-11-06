@@ -100,7 +100,7 @@ mainContainer.addEventListener('click', function () {
 
 contentAnchorIconMenu.addEventListener('click' , function () {
         activeMenu = quiteMenu(activeMenu)
-        changeIcon()
+        if (navMobile) changeIcon()
     }
 )
 
