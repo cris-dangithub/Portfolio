@@ -21,7 +21,7 @@ function changeIcon() {
 
 function showNumbers (numbers) { //!
     let a = numbers.map((element) => element = 0 )
-    let cantidadDeNumeros = 100 //Sin incluir el cero, es decir al final serian 6
+    let cantidadDeNumeros = 100 //Sin incluir el cero
     let tTotal = 1000 //en milisegundos
     let timePerIteration = tTotal/cantidadDeNumeros
     let count = 0
